@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    escola Escola;
+    escola escola;
     int controle = 0;
     int qtdPessoas = 0;
     int qtdAlunos = 0;
