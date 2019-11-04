@@ -112,6 +112,7 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdPessoas, 
     int achou2 = 0;
     int existe = 0;
     int id_disciplina = 0;
+    int id_aluno = 0;
     cadastros Aluno;
     printf("\nDigite o codigo da disciplina: \n");
     scanf("%i", &codigo);
@@ -128,7 +129,7 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdPessoas, 
     {
         printf("\nDigite a matricula do aluno que deseja adicionar a materia: \n");
         scanf("%i", &matricula);
-        for (int i = 0; i <= qtdPessoas + 2; i++)
+        for (int i = 0; i <= qtdPessoas; i++)
         {
             if (Pessoas[i].aluno.matricula == matricula)
             {
@@ -139,7 +140,7 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdPessoas, 
         }
         if (achou2 == 1)
         {
-            for (int i = 0; i <= qtdPessoas + 2; i++)
+            for (int i = 0; i <= qtdPessoas; i++)
             {
                 if (Disciplinas[id_disciplina].alunos[i].aluno.matricula == matricula)
                 {
@@ -150,8 +151,9 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdPessoas, 
 
             if (existe == 0)
             {
+                id_aluno = Disciplinas[id_disciplina].qtdAlunos;
                 printf("%i", Disciplinas[id_disciplina].qtdAlunos);
-                Disciplinas[id_disciplina].alunos[qtdAlunos] = Aluno;
+                Disciplinas[id_disciplina].alunos[id_aluno] = Aluno;
                 Disciplinas[id_disciplina].qtdAlunos++;
                 printf("%i", Disciplinas[id_disciplina].alunos[qtdAlunos].aluno.matricula);
                 printf("%i", Disciplinas[id_disciplina].qtdAlunos);
