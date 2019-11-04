@@ -16,49 +16,49 @@ int main(int argc, char const *argv[])
         switch (controle)
         {
         case 1:
+            
+            break;
+
+        case 2:
             do
-    {
-        printf("\nSistema de Disciplinas-------------\n1 - Cadastrar disciplina\n2 - Alterar professor de uma disciplina\n3 - Adicionar um aluno a uma disciplina\n4 - Remover aluno de uma disciplina\n5 - Exibir dados de uma disciplina\n6 - Voltar ao menu principal\n");
-        scanf("%i", &controle);
-        switch (controle)
-        {
-        case 1:
-            resultado = cadastraDisciplina(escola.pessoas, escola.disciplinas, escola.qtdDisciplinas);
-            if (resultado == 1)
             {
-                escola.qtdDisciplinas++;
-            }
-            break;
+                printf("\nSistema de Disciplinas-------------\n1 - Cadastrar disciplina\n2 - Alterar professor de uma disciplina\n3 - Adicionar um aluno a uma disciplina\n4 - Remover aluno de uma disciplina\n5 - Exibir dados de uma disciplina\n6 - Voltar ao menu principal\n");
+                scanf("%i", &controle);
+                switch (controle)
+                {
+                case 1:
+                    resultado = cadastraDisciplina(escola.pessoas, escola.disciplinas, escola.qtdDisciplinas);
+                    if (resultado == 1)
+                    {
+                        escola.qtdDisciplinas++;
+                    }
+                    break;
 
-        case 2:
-            alteraDisciplina(escola.pessoas, escola.disciplinas);
-            break;
+                case 2:
+                    alteraDisciplina(escola.pessoas, escola.disciplinas);
+                    break;
 
-        case 3:
-            adicionaAluno(escola.disciplinas, escola.pessoas, qtdPessoas, escola.qtdAlunos);
-            break;
+                case 3:
+                    adicionaAluno(escola.disciplinas, escola.pessoas, qtdPessoas, escola.qtdAlunos);
+                    break;
 
-        case 4:
-            removeAluno(escola.disciplinas, escola.pessoas, escola.qtdAlunos);
-            break;
+                case 4:
+                    removeAluno(escola.disciplinas, escola.pessoas, escola.qtdAlunos);
+                    break;
 
-        case 5:
-            exibeDisciplina(escola.disciplinas, escola.qtdDisciplinas);
-            break;
+                case 5:
+                    exibeDisciplina(escola.disciplinas, escola.qtdDisciplinas);
+                    break;
 
-        case 6:
-            printf("\nVoltando ao menu.\n");
-            break;
+                case 6:
+                    printf("\nVoltando ao menu.\n");
+                    break;
 
-        default:
-            printf("\nComando Invalido.\n");
-            break;
-        }
-    } while (controle != 6);
-            break;
-
-        case 2:
-
+                default:
+                    printf("\nComando Invalido.\n");
+                    break;
+                }
+            } while (controle != 6);
             break;
 
         case 3:
