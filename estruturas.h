@@ -17,7 +17,7 @@ typedef struct PNE
 
 typedef struct Aluno
 {
-    long int matricula;
+    int matricula;
 } aluno;
 
 typedef struct Professor
