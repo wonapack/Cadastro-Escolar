@@ -37,7 +37,6 @@ int cadastraDisciplina(cadastros *Pessoas, disciplina *Disciplinas, int qtdDisci
             Disciplinas[qtdDisciplinas].carga = carga;
             Disciplinas[qtdDisciplinas].professordisciplina = Pessoas[idprofessor];
             Disciplinas[qtdDisciplinas].qtdAlunos = 0;
-            qtdDisciplinas++;
             printf("\nMateria Cadastrada!\n");
             return 1;
         }
@@ -133,7 +132,7 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas)
         qtdAlunos = Disciplinas[id_disciplina].qtdAlunos;
         for (int i = 0; i <= (sizeof(Pessoas) / sizeof(Pessoas[0])) + 2; i++)
         {
-            if (Pessoas[i].aluno.matricula == matricula)
+            if (matricula == Pessoas[i].aluno.matricula)
             {
                 achou2 = 1;
                 Aluno = Pessoas[i];
@@ -204,7 +203,7 @@ void removeAluno(disciplina *Disciplinas, cadastros *Pessoas)
         scanf("%ld", &matricula);
         for (int i = 0; i <= (sizeof(Pessoas) / sizeof(Pessoas[0])) + 2; i++)
         {
-            if (Pessoas[i].aluno.matricula == matricula)
+            if (Disciplinas[id_disciplina].alunos[i].aluno.matricula == matricula)
             {
                 achou2 = 1;
                 id_aluno = i;
@@ -327,7 +326,21 @@ int main(int argc, char const *argv[])
     escola.pessoas[2].cep = 33333333;
     strcpy(escola.pessoas[2].endereco, "q300 cj52 cs12");
     escola.pessoas[2].tipo = 1;
-    escola.pessoas[2].aluno.matricula = 12345;
+    escola.pessoas[2].aluno.matricula = 19000;
+
+    strcpy(escola.pessoas[3].nome, "marcos");
+    strcpy(escola.pessoas[3].sobrenome, "sousa");
+    escola.pessoas[3].nacionalidade = 1;
+    strcpy(escola.pessoas[3].brasileiro.cpf, "44444444444");
+    strcpy(escola.pessoas[3].brasileiro.rg, "444444444");
+    escola.pessoas[3].dia = 26;
+    escola.pessoas[3].mes = 8;
+    escola.pessoas[3].ano = 1999;
+    escola.pessoas[3].pnet = 0;
+    escola.pessoas[3].cep = 44444444;
+    strcpy(escola.pessoas[3].endereco, "q300 cj52 cs12");
+    escola.pessoas[3].tipo = 1;
+    escola.pessoas[3].aluno.matricula = 19001;
 
     do
     {
