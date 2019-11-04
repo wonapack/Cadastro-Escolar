@@ -1,3 +1,10 @@
+#ifndef ESTRUTURAS_H
+#define ESTRUTURAS_H
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 typedef struct Brasileiro
 {
     char cpf[13];
@@ -84,3 +91,5 @@ void adicionaAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdPessoas, 
 void removeAluno(disciplina *Disciplinas, cadastros *Pessoas, int qtdAlunos);
 
 void exibeDisciplina(disciplina *Disciplinas, int qtdDisciplinas);
+
+#endif
