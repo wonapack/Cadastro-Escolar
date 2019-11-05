@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "estruturas.h"
+#include "disciplinas.h"
 
 int main(int argc, char const *argv[])
 {
